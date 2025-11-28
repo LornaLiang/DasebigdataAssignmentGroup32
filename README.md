@@ -31,20 +31,20 @@
 ## 1.3 Hadoop服务进程
 
 (1)master节点
-![](image/comfiguration/jps/master_jps.png)
+![](image/liangna_img/comfiguration/jps/master_jps.png)
 
 
 (2)worker1
-![](image/comfiguration/jps/worker1_jps.png)
+![](image/liangna_img/comfiguration/jps/worker1_jps.png)
 
 
 (3)worker2
-![](image/comfiguration/jps/worker2_jps.png)
+![](image/liangna_img/comfiguration/jps/worker2_jps.png)
 
 
 
 (4)worker3
-![](image/comfiguration/jps/worker3_jps.png)
+![](image/liangna_img/comfiguration/jps/worker3_jps.png)
 
 
 
@@ -60,11 +60,11 @@
 | JobHistory Server    | 19888 | 查看 MapReduce 详细历史信息 |
 
 (1)Web UI 9870端口
-![](image/comfiguration/9870.png)
+![](image/liangna_img/comfiguration/9870.png)
 (2)Web UI 8088端口
-![](image/comfiguration/8088.png)
+![](image/liangna_img/comfiguration/8088.png)
 ## 1.5 HDFS存储结构
-![](image/comfiguration/jps/hdfs_data.png)
+![](image/liangna_img/comfiguration/jps/hdfs_data.png)
 
 
 ## 1.6 集群部署方式
@@ -587,19 +587,19 @@ public static void main(String[] args) {
 **1.准备好数据并上传至HDFS**
 
 上传python脚本文件、生成数据集、上传数据集至HDFS
-
-
+![](image/liangna_img/comfiguration/gen_dataset.png)
+![](image/liangna_img/comfiguration/put.png)
 
 **2.上传代码**
 
 本地写好Java代码后将java文件上传到节点
-
+![](image/describe/putfile.png)
 
 
 **3.并使用Hadoop的class编译**
-
+![](image/describe/class.png)
 **4.在Linux上打包成jar**
-
+![](image/describe/jar.png)
 ### 3.3进行实验
 
 **1.每个节点分别在不同数据集执行任务，依次运行有/无combiner的实验**
