@@ -31,19 +31,20 @@
 ## 1.3 Hadoop服务进程
 
 (1)master节点
-
+![](image/comfiguration/jps/master_jps.png)
 
 
 (2)worker1
-
+![](image/comfiguration/jps/worker1_jps.png)
 
 
 (3)worker2
+![](image/comfiguration/jps/worker2_jps.png)
 
 
 
 (4)worker3
-
+![](image/comfiguration/jps/worker3_jps.png)
 
 
 
@@ -59,11 +60,11 @@
 | JobHistory Server    | 19888 | 查看 MapReduce 详细历史信息 |
 
 (1)Web UI 9870端口
-
+![](image/comfiguration/9870.png)
 (2)Web UI 8088端口
-
+![](image/comfiguration/8088.png)
 ## 1.5 HDFS存储结构
-
+![](image/comfiguration/jps/hdfs_data.png)
 
 
 ## 1.6 集群部署方式
