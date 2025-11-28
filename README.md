@@ -643,7 +643,6 @@ Reduce的数据同理
 
 ### 4.实验结果与分析
 
-![](https://github.com/LornaLiang/DasebigdataAssignmentGroup32/blob/readme-lyn/image/Analysis_Result.png))
 
 各组员将数据汇集到表格中，方便进行后续的图表绘制与数据分析
 
@@ -678,7 +677,7 @@ Reduce的数据同理
 
 可视化图表如下（包括图2-1，图2-2，图3-1，图3-2）：
 
-<img src="E:/分布式系统作业/image/Analysis_Result.png">
+![](https://github.com/LornaLiang/DasebigdataAssignmentGroup32/blob/readme-lyn/image/Analysis_Result.png)
 
 ### 2. Combiner 对 Shuffle 数据量与执行时间的影响分析
 
