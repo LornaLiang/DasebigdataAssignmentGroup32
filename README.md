@@ -643,7 +643,7 @@ Reduce的数据同理
 
 ### 4.实验结果与分析
 
-
+![](https://github.com/LornaLiang/DasebigdataAssignmentGroup32/blob/readme-lyn/image/Analysis_Result.png))
 
 各组员将数据汇集到表格中，方便进行后续的图表绘制与数据分析
 
