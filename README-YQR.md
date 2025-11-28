@@ -44,9 +44,9 @@ avg_50MB数据集用于求平均值的任务，key值均为1，value值为int型
 
 任务目标是对50MB的均衡数据集key计算value的平均值。
 
-直接在Combiner中对value求平均值会得出错误的结果，因为“平均值”本身不满足简单的结合律。所以在求平均值时，需要改变MapReduce的平均值计算模式：将平均值拆分为（sum,count).(sum,count)可以进行可结合的加法操作，得出正确的结果。
+直接在Combiner中对value求平均值，然后再在Reducer中对这些“局部平均值”再求平均会得出错误的结果，因为“平均值”本身不满足简单的结合律。所以在求平均值时，需要改变MapReduce的平均值计算模式：将平均值拆分为sum和count两个部分。这两个部分可以进行可结合的加法操作，得出正确的结果。
 
-在Map阶段输出key的局部value和计数值(value,1)后，输入Combiner阶段，会输出同一key合并后的(sum,count)组，这时Combiner只做了加法，满足了结合律和交换律，能够得出正确的平均值结果，同时也大幅度减少了传输到Reducer的中间键值对数量。Reducer最后对多个Map/Combiner输出的值进行累加，得到全局的(sum,count)并求出平均值。
+在Map阶段对于输入的每一条记录，输出(sum,value)和（count,1)，输入Combiner阶段，会对sum和count进行分别求和，这时Combiner只做了加法，满足了结合律和交换律，不会影响最终的结果，同时也大幅度减少了传输到Reducer的中间键值对数量。Reducer最后对多个Map/Combiner输出的值进行累加，得到全局的(sum,count)并求出平均值。
 
 该任务只在avg_50MB一个数据集上进行了实验，通过对比在不使用Combiner、使用错误的模式以及使用正确的支持Combiner的模式这三种情况下的结果，探究Combiner适合使用的任务场景，设计出适合Combiner的聚合逻辑。
 
