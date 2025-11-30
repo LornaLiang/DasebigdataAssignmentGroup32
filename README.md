@@ -89,7 +89,7 @@
 |  skew_60_25MB.txt   |    60%     | 25MB  |
 | extreme90_100MB.txt |    90%     | 100MB |
 | extreme90_200MB.txt |    90%     | 200MB |
-|      avg_50MB       |            | 50MB  |
+|      avg_50MB       |     0%     | 50MB  |
 
 本实验一共构造了9个数据集。其中，8个数据集用于研究在不同规模和key分布下Combiner的效果：
 
